@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Wikipedia Viewer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <h1>Wikipedia Viewer</h1>
+      <a href="http://en.wikipedia.org/wiki/Special:Random" target="blank">Get a random article</a>
+
+      <div class="search-box">
+        <label for="query">Type a word to search for in wikipedia:</label>
+        <form action="" class="query-form">
+          <input type="text" class="form-control" id="query-string">
+          <input type="submit" class="btn btn-primary" id="query-submit" value="Search">
+        </form>
+      </div>
+      <div class="result-list">
+        <div class="result-item">
+          <div class="row">
+            <div class="article-title">
+              <h2><span class="article-number">1. </span>TITLE</h2>
+            </div>
+            <div class="article-content">
+              <col-xs-11>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente possimus aliquid quam modi debitis, cum veritatis consequatur fugiat iste similique id laudantium dicta nam. Corrupti animi, magni quaerat sit omnis! </p>
+              </col-xs-11>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="js/index.js"></script>
+
+  </body>
+</html>
