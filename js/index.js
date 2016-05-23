@@ -5,7 +5,6 @@ $( document ).ready(function() {
     var query = $("#query-string").val();
     // Append query string to the URL
     var url = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=" + query + "&limit=10&utf8=1";
-    // Works until here
     // GET 10 relevant articles from Wikipedia API
     $.ajax( {
         url: url,
@@ -14,9 +13,12 @@ $( document ).ready(function() {
         headers: { 'Api-User-Agent': 'Example/1.0' },
         success: function(data) {
           var titles = data[1];
-          // var content = data[2];
-          // var links = data[3];
-          console.log( titles );
+          var content = data[2];
+          var links = data[3];
+          // for each element of the list
+          for (i = 0; i < data.length; i++) {
+            $( ".result-item" ).append("<h2>" + i + ". " + titles[i] + "</h2>" + "<p>" + content[i] + " - see more at: " + links[i] + "</p>");
+          }
         },
         fail: function(data) {
           alert( "Oops... Something went wrong!");
