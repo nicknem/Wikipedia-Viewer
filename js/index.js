@@ -20,7 +20,8 @@ $( document ).ready(function() {
           var links = data[3];
           // Insert Wikipedia articles
           for (i = 0; i < data.length; i++) {
-            $( ".results" ).append("<h3>" + i + ". " + titles[i] + "</h3>" + "<p>" + content[i] + " - see more at: " + links[i] + "</p>");
+            $( ".results" ).append("<h3>" + i + ". " + titles[i] + "</h3>" + "<p>" +
+              content[i] + " - see more at: " + links[i] + "</p>");
             // And one content
           }
         },
